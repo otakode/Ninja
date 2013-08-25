@@ -8,6 +8,7 @@ class	Character : public Surface
 protected:
 	int	_speed;
 	int	_dir;
+	int	_jumping;
 
 public:
 	Character();

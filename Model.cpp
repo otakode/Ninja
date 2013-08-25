@@ -15,9 +15,11 @@ bool	Model::Init(Game* game, View* view)
 	this->_view = view;
 
 	this->player.rect.y = 200;
+	this->ground.rect.y = 300;
 
 	this->_view->screen.AddChild(&this->background);
 	this->_view->screen.AddChild(&this->player);
+	this->_view->screen.AddChild(&this->ground);
 
 	return true;
 }

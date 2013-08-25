@@ -6,7 +6,7 @@
 #include "View.h"
 #include "Background.h"
 #include "Character.h"
-
+#include "Ground.h"
 
 class	Game;
 
@@ -19,6 +19,7 @@ protected:
 public:
 	Background	background;
 	Character	player;
+	Ground		ground;
 
 public:
 	Model();
