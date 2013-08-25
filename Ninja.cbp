@@ -42,7 +42,24 @@
 			<Add library="dxguid" />
 			<Add directory="$(#sdl.lib)" />
 		</Linker>
-		<Unit filename="cb.bmp" />
+		<Unit filename="Background.cpp" />
+		<Unit filename="Background.h" />
+		<Unit filename="Character.cpp" />
+		<Unit filename="Character.h" />
+		<Unit filename="Controller.cpp" />
+		<Unit filename="Controller.h" />
+		<Unit filename="Game.cpp" />
+		<Unit filename="Game.h" />
+		<Unit filename="Model.cpp" />
+		<Unit filename="Model.h" />
+		<Unit filename="Screen.cpp" />
+		<Unit filename="Screen.h" />
+		<Unit filename="Surface.cpp" />
+		<Unit filename="Surface.h" />
+		<Unit filename="Thread.cpp" />
+		<Unit filename="Thread.h" />
+		<Unit filename="View.cpp" />
+		<Unit filename="View.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
