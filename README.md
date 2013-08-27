@@ -1,4 +1,0 @@
-Ninja
-=====
-
-Ninja
