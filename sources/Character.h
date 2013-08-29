@@ -13,6 +13,10 @@ protected:
 	float	_jumping;
 
 public:
+	float	x;
+	float	y;
+
+public:
 	Character();
 	virtual	~Character();
 

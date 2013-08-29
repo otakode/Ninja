@@ -50,7 +50,7 @@ void	Surface::Draw()
 	for (std::list<Surface*>::iterator it = this->_children.begin(), e = this->_children.end(); it != e; ++it)
 	{
 		Surface*	surface = *it;
-		surface->Draw();
+	//	surface->Draw();
 		this->Blit(surface, &surface->rect);
 	}
 }

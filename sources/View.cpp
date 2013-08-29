@@ -11,7 +11,6 @@ View::~View()
 }
 
 bool	View::Init(Game* game, const char* name)
-
 {
 	this->_game = game;
 

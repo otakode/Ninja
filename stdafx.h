@@ -7,7 +7,7 @@
 
 #include "targetver.h"
 
-#define WIN32_LEAN_AND_MEAN             // Exclure les en-têtes Windows rarement utilisés
+//#define WIN32_LEAN_AND_MEAN             // Exclure les en-têtes Windows rarement utilisés
 // Fichiers d'en-tête Windows :
 #include <windows.h>
 
@@ -17,5 +17,6 @@
 #include <memory.h>
 #include <tchar.h>
 
+#pragma comment(lib, "winmm.lib")
 
 // TODO: faites référence ici aux en-têtes supplémentaires nécessaires au programme

@@ -1,11 +1,10 @@
 #include "stdafx.h"
 #include "Time.h"
-#include <iostream>
 
-float	Time::__speed = 1.0f;
+float	Time::__speed = 5.0f;
 float	Time::__now = 0.0f;
-float&	Time::speed = Time::__speed;
-float&	Time::now = Time::__now;
+const float&	Time::speed = Time::__speed;
+const float&	Time::now = Time::__now;
 
 Time::Time() : _lastTime(Time::now)
 {
@@ -17,7 +16,7 @@ Time::~Time()
 
 void	Time::UpdateTime()
 {
-	Time::__now = time(NULL) * 60 * 60 * 3600;
+	Time::__now = (float)timeGetTime() / 1000.0f;
 }
 
 float	Time::Elapsed()
