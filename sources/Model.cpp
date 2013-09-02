@@ -16,7 +16,7 @@ bool	Model::Init(Game* game, View* view)
 	this->_view = view;
 
 	this->player.y = 200;
-	this->ground.rect.y = 300;
+	this->ground.pos.y = 300;
 
 	this->_view->screen.AddChild(&this->background);
 	this->_view->screen.AddChild(&this->player);
@@ -27,6 +27,8 @@ bool	Model::Init(Game* game, View* view)
 
 void	Model::Run()
 {
-	Time::UpdateTime();
 	this->player.Update();
+/*	char test[1000];
+	sprintf(test, "%f", Time::elapsed);
+	this->_view->screen.SetTitle(test);*/
 }

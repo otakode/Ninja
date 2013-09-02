@@ -3,32 +3,28 @@
 
 Surface::Surface(int width, int height, int color)
 {
-	this->surface = SDL_CreateRGBSurface(SDL_HWSURFACE, width, height, 32, 0, 0, 0, 0);
-	this->rect.x = 0;
-	this->rect.y = 0;
-	this->rect.w = width;
-	this->rect.h = height;
-	SDL_FillRect(this->surface, &this->rect, color);
+	this->surface = SDL_CreateRGBSurface(SDL_HWSURFACE | SDL_SRCALPHA, width, height, 32, 0, 0, 0, 0);
+	if (this->Init())
+		SDL_FillRect(this->surface, &this->chunk, color);
 }
 
 Surface::Surface(const char* imgPath)
 {
 	this->surface = SDL_LoadBMP(imgPath);
+	this->Init();
 }
 
 Surface::Surface(SDL_Surface* ptr)
 {
 	this->surface = ptr;
+	this->Init();
 }
 
 Surface::Surface(Surface& model)
 {
 	this->surface = SDL_CreateRGBSurface(model.surface->flags, model.surface->w, model.surface->h, model.surface->format->BitsPerPixel, model.surface->format->Rmask, model.surface->format->Gmask, model.surface->format->Bmask, model.surface->format->Amask);
-	this->rect.x = 0;
-	this->rect.y = 0;
-	this->rect.w = this->surface->w;
-	this->rect.h = this->surface->h;
-	this->Blit(&model, &this->rect);
+	if (this->Init(&model.pos, &model.chunk))
+		this->Blit(&model);
 }
 
 Surface::~Surface()
@@ -40,18 +36,62 @@ Surface::~Surface()
 	}
 }
 
-void	Surface::Blit(Surface* surf, SDL_Rect* destRect, SDL_Rect* srcRect)
+bool	Surface::Init(int x, int y, int w, int h, int offx, int offy)
 {
-	SDL_BlitSurface(surf->surface, srcRect, this->surface, destRect);
+	this->pos.x = x;
+	this->pos.y = y;
+
+	this->chunk.x = offx;
+	this->chunk.y = offy;
+	this->chunk.w = w;
+	this->chunk.h = h;
+
+	if (this->surface == NULL)
+		return false;
+
+	if (w == -1)
+		this->chunk.w = this->surface->w;
+	if (h == -1)
+		this->chunk.w = this->surface->h;
+
+	return true;
+}
+
+bool	Surface::Init(int x, int y, SDL_Rect* chunk)
+{
+	this->pos.x = x;
+	this->pos.y = y;
+	this->chunk = *chunk;
+	return true;
+}
+
+bool	Surface::Init(SDL_Rect* pos, SDL_Rect* chunk)
+{
+	this->pos = *pos;
+	this->chunk = *chunk;
+	return true;
+}
+
+void	Surface::Clear()
+{
+	SDL_FillRect(this->surface, &this->chunk, SDL_MapRGBA(this->surface->format, 0, 0, 0, 0));
+}
+
+void	Surface::Blit(Surface* surface, SDL_Rect* pos, SDL_Rect* chunk)
+{
+	SDL_BlitSurface(surface->surface, chunk, this->surface, pos);
 }
 
 void	Surface::Draw()
 {
+	if (this->_children.empty())
+		return;
+	this->Clear();
 	for (std::list<Surface*>::iterator it = this->_children.begin(), e = this->_children.end(); it != e; ++it)
 	{
 		Surface*	surface = *it;
-	//	surface->Draw();
-		this->Blit(surface, &surface->rect);
+		surface->Draw();
+		this->Blit(surface, &surface->pos, &surface->chunk);
 	}
 }
 

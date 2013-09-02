@@ -9,22 +9,19 @@ class	Time
 private:
 	static float	__speed;
 	static float	__now;
+	static float	__lastTime;
+	static float	__elapsed;
 
 public:
 	static const float&	speed;
 	static const float&	now;
-
-protected:
-	float	_lastTime;
+	static const float&	elapsed;
 
 public:
 	Time();
 	virtual ~Time();
 
-	static void	UpdateTime();
-
-	float	Elapsed();
-
+	static bool	UpdateTime();
 };
 
 #endif // __TIME_H__

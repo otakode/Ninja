@@ -7,7 +7,6 @@
 class	Character : public Surface
 {
 protected:
-	Time	_time;
 	float	_speed;
 	float	_dir;
 	float	_jumping;

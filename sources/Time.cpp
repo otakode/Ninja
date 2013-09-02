@@ -1,27 +1,32 @@
 #include "stdafx.h"
 #include "Time.h"
 
-float	Time::__speed = 5.0f;
+float	Time::__speed = 1.0f;
 float	Time::__now = 0.0f;
+float	Time::__lastTime = 0.0f;
+float	Time::__elapsed = 0.0f;
 const float&	Time::speed = Time::__speed;
 const float&	Time::now = Time::__now;
+const float&	Time::elapsed= Time::__elapsed;
 
-Time::Time() : _lastTime(Time::now)
+Time::Time()
 {
+	this->UpdateTime();
+	this->UpdateTime();
 }
 
 Time::~Time()
 {
 }
 
-void	Time::UpdateTime()
+bool	Time::UpdateTime()
 {
-	Time::__now = (float)timeGetTime() / 1000.0f;
-}
+	Time::__now = (float)timeGetTime() * 0.001f;
 
-float	Time::Elapsed()
-{
-	float	elapsed = (Time::now - this->_lastTime) * Time::speed;
-	this->_lastTime = Time::now;
-	return elapsed;
+	Time::__elapsed = Time::now - Time::__lastTime;
+	if (Time::elapsed < 0.0167f)
+		return false;
+	Time::__lastTime = Time::now;
+	Time::__elapsed *= Time::speed;
+	return true;
 }

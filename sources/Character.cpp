@@ -6,8 +6,8 @@ Character::Character() : Surface(100, 100, 0xFF0000)
 	this->_speed = 30.0f;
 	this->_dir = 0.0f;
 	this->_jumping = -1.0f;
-	this->x = (float)this->rect.x;
-	this->y = (float)this->rect.y;
+	this->x = (float)this->pos.x;
+	this->y = (float)this->pos.y;
 }
 
 Character::~Character()
@@ -27,13 +27,13 @@ void	Character::Jump()
 
 void	Character::Update()
 {
-	float	elapsed = this->_time.Elapsed();
+	float	elapsed = Time::elapsed;
 	this->x += elapsed * this->_speed * this->_dir;
-	if (this->_jumping > -1.0f)
+/*	if (this->_jumping > -1.0f)
 	{
 		this->y -= elapsed * this->_speed * this->_jumping;
 		this->_jumping -= elapsed;
-	}
-	this->rect.x = (int)this->x;
-	this->rect.y = (int)this->y;
+	}*/
+	this->pos.x = (int)this->x;
+	this->pos.y = (int)this->y;
 }
