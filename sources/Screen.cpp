@@ -3,7 +3,7 @@
 
 Screen::Screen(int width, int height)
 {
-	this->surface = SDL_SetVideoMode(width, height, 32, SDL_HWSURFACE);
+	this->surface = SDL_SetVideoMode(width, height, 32, SDL_HWSURFACE | SDL_DOUBLEBUF);
 }
 
 Screen::~Screen()

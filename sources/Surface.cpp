@@ -52,7 +52,7 @@ bool	Surface::Init(int x, int y, int w, int h, int offx, int offy)
 	if (w == -1)
 		this->chunk.w = this->surface->w;
 	if (h == -1)
-		this->chunk.w = this->surface->h;
+		this->chunk.h = this->surface->h;
 
 	return true;
 }
