@@ -11,8 +11,6 @@ const float&	Time::elapsed= Time::__elapsed;
 
 Time::Time()
 {
-	this->UpdateTime();
-	this->UpdateTime();
 }
 
 Time::~Time()
@@ -26,6 +24,8 @@ bool	Time::UpdateTime()
 	Time::__elapsed = Time::now - Time::__lastTime;
 	if (Time::elapsed < 0.0167f)
 		return false;
+	if (Time::elapsed > 0.3f)
+		Time::__elapsed = 0.3f;
 	Time::__lastTime = Time::now;
 	Time::__elapsed *= Time::speed;
 	return true;
