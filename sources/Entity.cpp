@@ -36,4 +36,12 @@ void	Entity::AddChild(int offset, Entity* child)
 void	Entity::DelChild(Entity* child)
 {
 //	this->_children.insert(std::pair<int, Entity*>(offset, child));
+	for (std::multimap<int, Entity*>::iterator it = this->children.begin(), e = this->children.end(); it != e; ++it)
+	{
+		if (if->second == child)
+		{
+			this->_children.erase(it);
+			break;
+		}
+	}
 }
