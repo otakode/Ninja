@@ -71,6 +71,9 @@
     <ClInclude Include="sources\Time.h">
       <Filter>sources</Filter>
     </ClInclude>
+    <ClInclude Include="sources\Entity.h">
+      <Filter>sources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -110,6 +113,9 @@
       <Filter>sources</Filter>
     </ClCompile>
     <ClCompile Include="sources\Time.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\Entity.cpp">
       <Filter>sources</Filter>
     </ClCompile>
   </ItemGroup>

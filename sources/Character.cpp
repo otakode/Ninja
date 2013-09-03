@@ -31,8 +31,13 @@ void	Character::Update()
 	this->x += elapsed * this->_speed * this->_dir;
 /*	if (this->_jumping > -1.0f)
 	{
-		this->y -= elapsed * this->_speed * this->_jumping;
 		this->_jumping -= elapsed;
+		if (this->_jumping <= -1.0f)
+		{
+			elapsed = (this->_jumping + 1.0f);
+			this->_jumping = -1.0f;
+		}
+		this->y -= elapsed * this->_speed * this->_jumping;
 	}*/
 	this->pos.x = (int)this->x;
 	this->pos.y = (int)this->y;

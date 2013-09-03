@@ -86,6 +86,7 @@
     <ClInclude Include="sources\Background.h" />
     <ClInclude Include="sources\Character.h" />
     <ClInclude Include="sources\Controller.h" />
+    <ClInclude Include="sources\Entity.h" />
     <ClInclude Include="sources\Game.h" />
     <ClInclude Include="sources\Ground.h" />
     <ClInclude Include="sources\Model.h" />
@@ -102,6 +103,7 @@
     <ClCompile Include="sources\Background.cpp" />
     <ClCompile Include="sources\Character.cpp" />
     <ClCompile Include="sources\Controller.cpp" />
+    <ClCompile Include="sources\Entity.cpp" />
     <ClCompile Include="sources\Game.cpp" />
     <ClCompile Include="sources\Ground.cpp" />
     <ClCompile Include="sources\Model.cpp" />
