@@ -1,15 +1,22 @@
-﻿Build started 04/09/2013 19:31:32.
+﻿Build started 05/09/2013 21:47:24.
      1>Project "C:\Users\Otakode\Documents\Visual Studio 2012\Projects\Ninja\Ninja.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Ninja.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt sources\Entity.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Ninja.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Ninja.cpp sources\Component.cpp sources\Controller.cpp sources\Entity.cpp sources\Game.cpp sources\Model.cpp sources\View.cpp
+         Model.cpp
          Entity.cpp
-     1>c:\users\otakode\documents\visual studio 2012\projects\ninja\sources\entity.h(16): warning C4227: anachronism used : qualifiers on reference are ignored
-     1>cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+         Component.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         View.cpp
+         Game.cpp
+         Controller.cpp
+         Ninja.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Otakode\Documents\Visual Studio 2012\Projects\Ninja\Debug\Ninja.exe" /INCREMENTAL /NOLOGO SDL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Otakode\Documents\Visual Studio 2012\Projects\Ninja\Debug\Ninja.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Otakode\Documents\Visual Studio 2012\Projects\Ninja\Debug\Ninja.lib" /MACHINE:X86 Debug\Ninja.res
          Debug\Ninja.obj
          Debug\Background.obj
          Debug\Character.obj
+         Debug\Component.obj
          Debug\Controller.obj
          Debug\Entity.obj
          Debug\Game.obj
@@ -26,4 +33,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.24
+Time Elapsed 00:00:01.51

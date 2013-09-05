@@ -8,6 +8,7 @@
 #include "Character.h"
 #include "Ground.h"
 #include "Time.h"
+#include "Entity.h"
 
 class	Game;
 
@@ -18,6 +19,7 @@ protected:
 	View*	_view;
 
 public:
+	Entity		root;
 	Background	background;
 	Character	player;
 	Ground		ground;
@@ -29,6 +31,6 @@ public:
 	bool	Init(Game* game, View* view);
 	void	Run();
 
-};
+}; // Model
 
 #endif // __MODEL_H__

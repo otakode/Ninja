@@ -22,6 +22,23 @@ bool	Model::Init(Game* game, View* view)
 	this->_view->screen.AddChild(&this->player);
 	this->_view->screen.AddChild(&this->ground);
 
+/*	for (int i = 0; i < 10000; i++)
+	{
+		this->root.AddChild(0, new Entity());
+		this->root.DelChild(this->root.children.begin()->second);
+		char toto[100];
+		sprintf(toto, "%i", this->root.children.size());
+		this->_view->screen.SetTitle(toto);
+	}
+	for (int i = 0; i < 10000; i++)
+	{
+		this->root.AddComponent(new Component(Component::NONE));
+		this->root.DelComponent(this->root.components.begin()->second);
+		char toto[100];
+		sprintf(toto, "%i", this->root.components.size());
+		this->_view->screen.SetTitle(toto);
+	}*/
+
 	return true;
 }
 

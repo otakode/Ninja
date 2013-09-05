@@ -34,7 +34,7 @@ public:
 
 protected:
 
-};
+}; // Surface
 
 
 #endif // __SURFACE_H__
