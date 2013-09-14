@@ -2,13 +2,13 @@
 #define __MODEL_H__
 
 #include <SDL.h>
-#include "Thread.h"
+//#include "Thread.h"
 #include "View.h"
-#include "Background.h"
-#include "Character.h"
-#include "Ground.h"
-#include "Time.h"
+//#include "Time.h"
 #include "Entity.h"
+#include "Background.h"
+#include "Ground.h"
+#include "Character.h"
 
 class	Game;
 
@@ -19,10 +19,8 @@ protected:
 	View*	_view;
 
 public:
-	Entity		root;
-	Background	background;
-	Character	player;
-	Ground		ground;
+	Entity*		root;
+	Character*	player;
 
 public:
 	Model();

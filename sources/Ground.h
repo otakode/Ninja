@@ -1,9 +1,10 @@
 #ifndef __GROUND_H__
 #define __GROUND_H__
 
+#include "Entity.h"
 #include "Surface.h"
 
-class	Ground : public Surface
+class	Ground : public Entity
 {
 protected:
 

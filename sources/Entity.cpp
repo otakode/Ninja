@@ -18,6 +18,10 @@ Entity::Entity(Entity& model) : parent(_parent), pos(_pos), children(_children),
 
 Entity::~Entity()
 {
+	while (!this->components.empty())
+	{
+		delete this->components.begin()->second;
+	}
 	while (!this->children.empty())
 	{
 		delete this->children.begin()->second;
@@ -28,6 +32,20 @@ Entity::~Entity()
 	}*/
 	if (this->parent != NULL)
 		this->parent->DelChild(this);
+}
+
+SDL_Rect	Entity::GetAbsolutePos()
+{
+	SDL_Rect absPos = this->pos;
+
+	Entity* entity = this;
+	while (entity->parent != NULL)
+	{
+		entity = entity->parent;
+		absPos.x += entity->pos.x;
+		absPos.y += entity->pos.y;
+	}
+	return absPos;
 }
 
 void	Entity::AddChild(int offset, Entity* child)
@@ -48,6 +66,21 @@ void	Entity::DelChild(Entity* child)
 	}
 }
 
+std::vector<Entity*>	Entity::GetChildWithComponent(Component::Type type)
+{
+	std::vector<Entity*> list;
+
+	if (this->GetComponent(type) != NULL)
+		list.push_back(this);
+	for (std::multimap<int, Entity*>::iterator it = this->_children.begin(), e = this->_children.end(); it != e; it++)
+	{
+		std::vector<Entity*> sublist = it->second->GetChildWithComponent(type);
+		if (!sublist.empty())
+			list.insert(list.end(), sublist.begin(), sublist.end());
+	}
+	return list;
+}
+
 void	Entity::AddComponent(Component* component)
 {
 	this->_components.insert(std::pair<Component::Type, Component*>(component->type, component));
@@ -56,4 +89,26 @@ void	Entity::AddComponent(Component* component)
 void	Entity::DelComponent(Component* component)
 {
 	this->_components.erase(this->_components.find(component->type));
+}
+
+Component*	Entity::GetComponent(Component::Type type)
+{
+	if (this->_components.find(type) != this->_components.end())
+		return this->_components.find(type)->second;
+	return NULL;
+}
+
+std::vector<Component*>	Entity::GetComponentsRecursive(Component::Type type)
+{
+	std::vector<Component*> list;
+
+	if (this->GetComponent(type) != NULL)
+		list.push_back(this->_components[type]);
+	for (std::multimap<int, Entity*>::iterator it = this->_children.begin(), e = this->_children.end(); it != e; it++)
+	{
+		std::vector<Component*> sublist = it->second->GetComponentsRecursive(type);
+		if (!sublist.empty())
+			list.insert(list.end(), sublist.begin(), sublist.end());
+	}
+	return list;
 }

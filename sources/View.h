@@ -2,16 +2,17 @@
 #define __VIEW_H__
 
 #include <SDL.h>
-#include "Thread.h"
+//#include "Thread.h"
 #include "Screen.h"
-#include "Surface.h"
+//#include "Surface.h"
 
 class	Game;
 
 class	View
 {
 public:
-	Screen	screen;
+	Screen*	screen;
+
 protected:
 	Game*	_game;
 

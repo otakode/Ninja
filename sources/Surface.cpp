@@ -1,29 +1,29 @@
 #include "stdafx.h"
 #include "Surface.h"
 
-Surface::Surface(int width, int height, int color)
+Surface::Surface(int width, int height, int color) : Component(Component::SURFACE)
 {
 	this->surface = SDL_CreateRGBSurface(SDL_HWSURFACE | SDL_SRCALPHA, width, height, 32, 0, 0, 0, 0);
 	if (this->Init())
 		SDL_FillRect(this->surface, &this->chunk, color);
 }
 
-Surface::Surface(const char* imgPath)
+Surface::Surface(const char* imgPath) : Component(Component::SURFACE)
 {
 	this->surface = SDL_LoadBMP(imgPath);
 	this->Init();
 }
 
-Surface::Surface(SDL_Surface* ptr)
+Surface::Surface(SDL_Surface* ptr) : Component(Component::SURFACE)
 {
 	this->surface = ptr;
 	this->Init();
 }
 
-Surface::Surface(Surface& model)
+Surface::Surface(Surface& model) : Component(Component::SURFACE)
 {
 	this->surface = SDL_CreateRGBSurface(model.surface->flags, model.surface->w, model.surface->h, model.surface->format->BitsPerPixel, model.surface->format->Rmask, model.surface->format->Gmask, model.surface->format->Bmask, model.surface->format->Amask);
-	if (this->Init(&model.pos, &model.chunk))
+	if (this->Init(&model.chunk))
 		this->Blit(&model);
 }
 
@@ -36,11 +36,8 @@ Surface::~Surface()
 	}
 }
 
-bool	Surface::Init(int x, int y, int w, int h, int offx, int offy)
+bool	Surface::Init(int w, int h, int offx, int offy)
 {
-	this->pos.x = x;
-	this->pos.y = y;
-
 	this->chunk.x = offx;
 	this->chunk.y = offy;
 	this->chunk.w = w;
@@ -57,17 +54,8 @@ bool	Surface::Init(int x, int y, int w, int h, int offx, int offy)
 	return true;
 }
 
-bool	Surface::Init(int x, int y, SDL_Rect* chunk)
+bool	Surface::Init(SDL_Rect* chunk)
 {
-	this->pos.x = x;
-	this->pos.y = y;
-	this->chunk = *chunk;
-	return true;
-}
-
-bool	Surface::Init(SDL_Rect* pos, SDL_Rect* chunk)
-{
-	this->pos = *pos;
 	this->chunk = *chunk;
 	return true;
 }
@@ -82,7 +70,7 @@ void	Surface::Blit(Surface* surface, SDL_Rect* pos, SDL_Rect* chunk)
 	SDL_BlitSurface(surface->surface, chunk, this->surface, pos);
 }
 
-void	Surface::Draw()
+/*void	Surface::Draw()
 {
 	if (this->_children.empty())
 		return;
@@ -93,14 +81,4 @@ void	Surface::Draw()
 		surface->Draw();
 		this->Blit(surface, &surface->pos, &surface->chunk);
 	}
-}
-
-void	Surface::AddChild(Surface* surface)
-{
-	this->_children.push_back(surface);
-}
-
-void	Surface::DelChild(Surface* surface)
-{
-	this->_children.remove(surface);
-}
+}*/

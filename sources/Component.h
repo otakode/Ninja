@@ -6,7 +6,8 @@ class Component
 public:
 	enum Type
 	{
-		NONE
+		NONE,
+		SURFACE
 	};
 
 protected:

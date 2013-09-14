@@ -39,12 +39,12 @@ void	Controller::Run()
 						this->_dir += 1.0f;
 						break;
 					case SDLK_UP:
-						this->_model->player.Jump();
+						this->_model->player->Jump();
 						break;
 					default:
 						break;
 				}
-				this->_model->player.Move(this->_dir);
+				this->_model->player->Move(this->_dir);
 				break;
 			case SDL_KEYUP:
 				switch (event.key.keysym.sym)
@@ -58,7 +58,7 @@ void	Controller::Run()
 					default:
 						break;
 				}
-				this->_model->player.Move(this->_dir);
+				this->_model->player->Move(this->_dir);
 				break;
 			default:
 				break;

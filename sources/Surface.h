@@ -4,14 +4,12 @@
 #include <SDL.h>
 #include <list>
 
-class	Surface
-{
-protected:
-	std::list<Surface*>	_children;
+#include "Component.h"
 
+class	Surface : public Component
+{
 public:
 	SDL_Surface*	surface;
-	SDL_Rect		pos;
 	SDL_Rect		chunk;
 
 public:
@@ -21,16 +19,12 @@ public:
 	Surface(Surface& model);
 	virtual	~Surface();
 
-	bool	Init(int x = 0, int y = 0, int w = -1, int h = -1, int offx = 0, int offy = 0);
-	bool	Init(int x, int y, SDL_Rect* chunk);
-	bool	Init(SDL_Rect* pos, SDL_Rect* chunk);
+	bool	Init(int w = -1, int h = -1, int offx = 0, int offy = 0);
+	bool	Init(SDL_Rect* chunk);
 
 	void	Clear();
 	void	Blit(Surface* surface, SDL_Rect* pos = NULL, SDL_Rect* chunk = NULL);
-	void	Draw();
-
-	void	AddChild(Surface* surface);
-	void	DelChild(Surface* surface);
+//	void	Draw();
 
 protected:
 
