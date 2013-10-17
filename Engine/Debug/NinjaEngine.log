@@ -1,0 +1,15 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Ninja.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Vector2.cpp
+  SoundsManager.cpp
+  PhysicsManager.cpp
+  Manager.cpp
+  Level.cpp
+  GraphicsManager.cpp
+  Game.cpp
+  Entity.cpp
+c:\users\otakode\documents\visual studio 2013\projects\ninja\ninjaengine\engine\entity.cpp(6): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+c:\users\otakode\documents\visual studio 2013\projects\ninja\ninjaengine\engine\entity.cpp(7): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+  ControlsManager.cpp
+  Component.cpp
+  Génération de code en cours...
+  NinjaEngine.vcxproj -> c:\users\otakode\documents\visual studio 2013\Projects\Ninja\Debug\NinjaEngine.lib
