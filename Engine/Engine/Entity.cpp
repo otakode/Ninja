@@ -1,13 +1,13 @@
 #include "Entity.h"
 
-Entity::Entity(Entity* parent, int x, int y) : parent(_parent), pos(_pos), children(_children), components(_components)
+Entity::Entity(Entity* parent, float x, float y) : parent(_parent), pos(_pos), children(_children), components(_components), _pos(0, 0)
 {
 	this->_parent = parent;
 	this->_pos.x = x;
 	this->_pos.y = y;
 }
 
-Entity::Entity(Entity& model) : parent(_parent), pos(_pos), children(_children), components(_components)
+Entity::Entity(Entity& model) : parent(_parent), pos(_pos), children(_children), components(_components), _pos(0, 0)
 {
 	this->_parent = model.parent;
 	this->_pos = model.pos;
@@ -33,9 +33,9 @@ Entity::~Entity()
 		this->parent->DelChild(this);
 }
 
-Vector2 Entity::GetAbsolutePos()
+Vector2<> Entity::GetAbsolutePos()
 {
-	Vector2 absPos = this->pos;
+	Vector2<> absPos = this->pos;
 
 	Entity* entity = this;
 	while (entity->parent != NULL)

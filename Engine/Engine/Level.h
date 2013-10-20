@@ -13,6 +13,9 @@ public:
 public:
 	Level();
 	virtual ~Level();
+
+	virtual void Load();
+	virtual void UnLoad();
 }; // Level
 
 #endif // __LEVEL_H__

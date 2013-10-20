@@ -1,19 +1,16 @@
 #ifndef __VECTOR2_H__
 #define __VECTOR2_H__
 
-class Vector2;
-
-//#include <SDL.h>
-
+template<class T = float>
 class Vector2
 {
 public:
-	float x;
-	float y;
+	T x;
+	T y;
 
 public:
-	Vector2(float X = 0, float Y = 0);
-	virtual ~Vector2();
+	Vector2(T X, T Y) : x(X), y(Y) {}
+	virtual ~Vector2() {}
 
 }; // Vector2
 

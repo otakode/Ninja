@@ -14,13 +14,13 @@ public:
 	};
 
 protected:
-	Type	_type;
+	Type _type;
 
 public:
 	const Type&	type;
 
 public:
-	Component(Type type);
+	Component(Type type = Type::NONE);
 	virtual ~Component();
 
 

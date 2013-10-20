@@ -12,6 +12,7 @@ public:
 	virtual ~ControlsManager();
 
 	virtual bool validComponent(Component::Type type);
+
 }; // ControlsManager
 
 #endif // __CONTROLSMANAGER_H__

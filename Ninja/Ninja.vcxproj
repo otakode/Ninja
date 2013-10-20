@@ -38,7 +38,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\Otakode\Documents\Git\Ninja\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Otakode\Documents\Git\Ninja\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -65,6 +68,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ninja\main.cpp" />
+    <ClCompile Include="Ninja\TestLevel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ninja\TestLevel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

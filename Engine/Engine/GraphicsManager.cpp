@@ -1,6 +1,6 @@
 #include "GraphicsManager.h"
 
-GraphicsManager::GraphicsManager()
+GraphicsManager::GraphicsManager() : screen(_screen), _screen(800, 600)
 {
 }
 

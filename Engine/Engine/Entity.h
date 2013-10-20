@@ -13,22 +13,22 @@ class Entity
 {
 protected:
 	Entity* _parent;
-	Vector2 _pos;
+	Vector2<> _pos;
 	std::multimap<int, Entity*> _children;
 	std::map<Component::Type, Component*> _components;
 
 public:
 	Entity* const parent;
-	const Vector2& pos;
+	const Vector2<>& pos;
 	const std::multimap<int, Entity*>& children;
 	const std::map<Component::Type, Component*>& components;
 
 public:
-	Entity(Entity* parent = NULL, int x = 0, int y = 0);
+	Entity(Entity* parent = NULL, float x = 0, float y = 0);
 	Entity(Entity& model);
 	virtual ~Entity();
 
-	Vector2	GetAbsolutePos();
+	Vector2<>	GetAbsolutePos();
 
 	void AddChild(int offset, Entity* child);
 	void DelChild(Entity* child);

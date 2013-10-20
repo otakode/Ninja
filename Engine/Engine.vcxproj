@@ -42,6 +42,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Otakode\Documents\Git\Ninja\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Otakode\Documents\Git\Ninja\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -81,22 +83,25 @@
     <ClCompile Include="Engine\ControlsManager.cpp" />
     <ClCompile Include="Engine\Entity.cpp" />
     <ClCompile Include="Engine\Game.cpp" />
+    <ClCompile Include="Engine\Graphic.cpp" />
     <ClCompile Include="Engine\GraphicsManager.cpp" />
     <ClCompile Include="Engine\Level.cpp" />
     <ClCompile Include="Engine\Manager.cpp" />
     <ClCompile Include="Engine\PhysicsManager.cpp" />
+    <ClCompile Include="Engine\Screen.cpp" />
     <ClCompile Include="Engine\SoundsManager.cpp" />
-    <ClCompile Include="Engine\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Component.h" />
     <ClInclude Include="Engine\ControlsManager.h" />
     <ClInclude Include="Engine\Entity.h" />
     <ClInclude Include="Engine\Game.h" />
+    <ClInclude Include="Engine\Graphic.h" />
     <ClInclude Include="Engine\GraphicsManager.h" />
     <ClInclude Include="Engine\Level.h" />
     <ClInclude Include="Engine\Manager.h" />
     <ClInclude Include="Engine\PhysicsManager.h" />
+    <ClInclude Include="Engine\Screen.h" />
     <ClInclude Include="Engine\SoundsManager.h" />
     <ClInclude Include="Engine\Vector2.h" />
   </ItemGroup>

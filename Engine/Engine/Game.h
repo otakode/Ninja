@@ -12,15 +12,28 @@ class Game;
 
 class Game
 {
-	std::list<Level> levels;
-	GraphicsManager graphics;
-	ControlsManager controls;
-	SoundsManager sounds;
-	PhysicsManager physics;
+private:
+	static Game* _instance;
+	static std::list<Level> _levels;
+	static GraphicsManager _graphics;
+	static ControlsManager _controls;
+	static SoundsManager _sounds;
+	static PhysicsManager _physics;
 
 public:
+	static const std::list<Level>& levels;
+	static GraphicsManager& graphics;
+	static ControlsManager& controls;
+	static SoundsManager& sounds;
+	static PhysicsManager& physics;
+
+protected:
 	Game();
 	virtual ~Game();
+
+public:
+	static void Run();
+
 }; // Game
 
 #endif // __GAME_H__
