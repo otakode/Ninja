@@ -3,8 +3,8 @@
 
 class TestLevel;
 
-#include "../../Engine/Engine/Level.h"
-#include "../../Engine/Engine/Graphic.h"
+#include "..\..\Engine\Engine\Level.h"
+#include "..\..\Engine\Engine\Graphic.h"
 
 class TestLevel : public Level
 {
