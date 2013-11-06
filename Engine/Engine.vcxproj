@@ -42,8 +42,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Otakode\Documents\Git\Ninja\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Otakode\Documents\Git\Ninja\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath);..\include</IncludePath>
+    <LibraryPath>$(LibraryPath);..\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>

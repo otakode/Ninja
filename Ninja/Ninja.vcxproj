@@ -39,8 +39,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Otakode\Documents\Git\Ninja\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Otakode\Documents\Git\Ninja\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath);..\include</IncludePath>
+    <LibraryPath>$(LibraryPath);..\lib</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -50,7 +50,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);..\lib\SDL\x86\SDL.lib;..\lib\SDL\x86\SDLmain.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

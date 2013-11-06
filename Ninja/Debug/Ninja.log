@@ -1,1 +1,8 @@
-﻿LINK : fatal error LNK1104: impossible d'ouvrir le fichier 'SDL.lib'
+﻿main.obj : error LNK2019: symbole externe non résolu "public: static void __cdecl Game::Run(void)" (?Run@Game@@SAXXZ) référencé dans la fonction _WinMain@16
+TestLevel.obj : error LNK2019: symbole externe non résolu "public: __thiscall Entity::Entity(class Entity *,float,float)" (??0Entity@@QAE@PAV0@MM@Z) référencé dans la fonction "public: virtual void __thiscall TestLevel::Load(void)" (?Load@TestLevel@@UAEXXZ)
+TestLevel.obj : error LNK2019: symbole externe non résolu "public: void __thiscall Entity::AddChild(int,class Entity *)" (?AddChild@Entity@@QAEXHPAV1@@Z) référencé dans la fonction "public: virtual void __thiscall TestLevel::Load(void)" (?Load@TestLevel@@UAEXXZ)
+TestLevel.obj : error LNK2019: symbole externe non résolu "public: void __thiscall Entity::AddComponent(class Component *)" (?AddComponent@Entity@@QAEXPAVComponent@@@Z) référencé dans la fonction "public: virtual void __thiscall TestLevel::Load(void)" (?Load@TestLevel@@UAEXXZ)
+TestLevel.obj : error LNK2019: symbole externe non résolu "public: __thiscall Level::Level(void)" (??0Level@@QAE@XZ) référencé dans la fonction "public: __thiscall TestLevel::TestLevel(void)" (??0TestLevel@@QAE@XZ)
+TestLevel.obj : error LNK2019: symbole externe non résolu "public: virtual __thiscall Level::~Level(void)" (??1Level@@UAE@XZ) référencé dans la fonction "public: virtual __thiscall TestLevel::~TestLevel(void)" (??1TestLevel@@UAE@XZ)
+TestLevel.obj : error LNK2019: symbole externe non résolu "public: __thiscall Graphic::Graphic(int,int,int)" (??0Graphic@@QAE@HHH@Z) référencé dans la fonction "public: virtual void __thiscall TestLevel::Load(void)" (?Load@TestLevel@@UAEXXZ)
+C:\Users\Otakode\Documents\Git\Ninja\Debug\Ninja.exe : fatal error LNK1120: 7 externes non résolus
