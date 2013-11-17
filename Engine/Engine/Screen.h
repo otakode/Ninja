@@ -12,6 +12,7 @@ public:
 	virtual ~Screen();
 
 	void SetTitle(const char* title);
+	void Flip();
 }; // Screen
 
 #endif // __SCREEN_H__

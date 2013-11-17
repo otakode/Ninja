@@ -18,7 +18,7 @@ protected:
 	std::map<Component::Type, Component*> _components;
 
 public:
-	Entity* const parent;
+//	Entity* const parent;
 	const Vector2<>& pos;
 	const std::multimap<int, Entity*>& children;
 	const std::map<Component::Type, Component*>& components;
@@ -28,7 +28,7 @@ public:
 	Entity(Entity& model);
 	virtual ~Entity();
 
-	Vector2<>	GetAbsolutePos();
+	Vector2<> GetAbsolutePos();
 
 	void AddChild(int offset, Entity* child);
 	void DelChild(Entity* child);

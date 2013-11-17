@@ -13,3 +13,9 @@ void Screen::SetTitle(const char* title)
 {
 	SDL_WM_SetCaption(title, NULL);
 }
+
+void Screen::Flip()
+{
+	if (this->_surface != NULL)
+		SDL_Flip(this->_surface);
+}

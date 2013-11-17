@@ -11,7 +11,7 @@ public:
 	ControlsManager();
 	virtual ~ControlsManager();
 
-	virtual bool validComponent(Component::Type type);
+	virtual bool Routine();
 
 }; // ControlsManager
 

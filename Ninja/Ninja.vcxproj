@@ -50,7 +50,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies);..\lib\SDL\x86\SDL.lib;..\lib\SDL\x86\SDLmain.lib</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);..\lib\SDL\x86\SDL.lib;..\lib\SDL\x86\SDLmain.lib;..\Debug\Engine.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

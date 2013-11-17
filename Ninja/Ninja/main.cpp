@@ -3,6 +3,7 @@
 #include <string.h>
 #include <tchar.h>
 #include "../../Engine/Engine/Game.h"
+#include "TestLevel.h"
 
 /*int main()
 {
@@ -13,7 +14,12 @@
 
 int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	Game::Run();
+	Game game;
+
+	TestLevel level;
+	Game::LoadLevel(&level);
+	game.Run();
+	level.UnLoad();
 
 	return EXIT_SUCCESS;
 }

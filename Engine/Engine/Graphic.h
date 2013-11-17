@@ -15,7 +15,7 @@ protected:
 	Vector2<int> _dimension;
 
 public:
-	SDL_Surface* const surface;
+//	SDL_Surface* const surface;
 	const Vector2<int>& position;
 	const Vector2<int>& dimension;
 
@@ -29,7 +29,7 @@ public:
 	bool Init(int x = 0, int y = 0, int w = -1, int h = -1);
 
 	void Fill(int color);
-	void Blit(Graphic& other, Vector2<int> pos = Vector2<int>(0, 0));
+	void Blit(Graphic* other, Vector2<int> pos = Vector2<int>(0, 0));
 }; // Graphic
 
 #endif // __GRAPHIC_H__

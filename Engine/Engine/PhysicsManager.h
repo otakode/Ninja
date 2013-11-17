@@ -11,7 +11,6 @@ public:
 	PhysicsManager();
 	virtual ~PhysicsManager();
 
-	virtual bool validComponent(Component::Type type);
 }; // PhysicsManager
 
 #endif // __PHYSICSMANAGER_H__

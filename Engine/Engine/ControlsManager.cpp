@@ -1,6 +1,7 @@
 #include "ControlsManager.h"
+#include <SDL/SDL.h>
 
-ControlsManager::ControlsManager()
+ControlsManager::ControlsManager() : Manager(Component::CONTROLLER)
 {
 }
 
@@ -8,7 +9,14 @@ ControlsManager::~ControlsManager()
 {
 }
 
-bool ControlsManager::validComponent(Component::Type type)
+bool ControlsManager::Routine()
 {
-	return (type == Component::Type::CONTROLLER ? true : false);
+	SDL_Event e;
+	if (SDL_PollEvent(&e))
+	{
+		if (e.type == SDL_QUIT)
+			return false;
+	}
+
+	return true;
 }

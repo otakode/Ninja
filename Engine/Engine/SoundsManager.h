@@ -11,7 +11,6 @@ public:
 	SoundsManager();
 	virtual ~SoundsManager();
 
-	virtual bool validComponent(Component::Type type);
 }; // SoundsManager
 
 #endif // __SOUNDSMANAGER_H__

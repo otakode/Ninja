@@ -18,7 +18,8 @@ public:
 	GraphicsManager();
 	virtual ~GraphicsManager();
 
-	virtual bool validComponent(Component::Type type);
+	virtual bool Routine();
+
 }; // GraphicsManager
 
 #endif // __GRAPHICSMANAGER_H__

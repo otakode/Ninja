@@ -1,15 +1,15 @@
 #include "Entity.h"
 
-Entity::Entity(Entity* parent, float x, float y) : parent(_parent), pos(_pos), children(_children), components(_components), _pos(0, 0)
+Entity::Entity(Entity* parent, float x, float y) : /*parent(_parent),*/ pos(_pos), children(_children), components(_components), _pos(0, 0)
 {
 	this->_parent = parent;
 	this->_pos.x = x;
 	this->_pos.y = y;
 }
 
-Entity::Entity(Entity& model) : parent(_parent), pos(_pos), children(_children), components(_components), _pos(0, 0)
+Entity::Entity(Entity& model) : /*parent(_parent),*/ pos(_pos), children(_children), components(_components), _pos(0, 0)
 {
-	this->_parent = model.parent;
+	this->_parent = model._parent;
 	this->_pos = model.pos;
 	this->_children = model.children;
 	this->_components = model.components;
@@ -17,20 +17,22 @@ Entity::Entity(Entity& model) : parent(_parent), pos(_pos), children(_children),
 
 Entity::~Entity()
 {
-	while (!this->components.empty())
+	while (!this->_components.empty())
 	{
-		delete this->components.begin()->second;
+		delete this->_components.begin()->second;
+		this->_components.erase(this->_components.begin());
 	}
-	while (!this->children.empty())
+	while (!this->_children.empty())
 	{
-		delete this->children.begin()->second;
+		delete this->_children.begin()->second;
+//		this->_children.erase(this->_children.begin());
 	}
 /*	for (std::multimap<int, Entity*>::iterator it = this->children.begin(), e = this->children.end(); it != e; ++it)
 	{
 		delete it->second; // crash, because of array modification
 	}*/
-	if (this->parent != NULL)
-		this->parent->DelChild(this);
+	if (this->_parent != NULL)
+		this->_parent->DelChild(this);
 }
 
 Vector2<> Entity::GetAbsolutePos()
@@ -38,9 +40,9 @@ Vector2<> Entity::GetAbsolutePos()
 	Vector2<> absPos = this->pos;
 
 	Entity* entity = this;
-	while (entity->parent != NULL)
+	while (entity->_parent != NULL)
 	{
-		entity = entity->parent;
+		entity = entity->_parent;
 		absPos.x += entity->pos.x;
 		absPos.y += entity->pos.y;
 	}

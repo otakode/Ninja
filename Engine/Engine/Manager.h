@@ -8,17 +8,22 @@ class Manager;
 
 class Manager
 {
+private:
+	Component::Type validComponent;
+
 protected:
 	std::list<Component*> _registry;
 
 public:
-	Manager();
+	Manager(Component::Type type);
 	virtual ~Manager();
 
 	void Register(Component* c);
 	void UnRegister(Component* c);
 
-	virtual bool validComponent(Component::Type type);
+	bool ValidComponent(Component::Type type);
+
+	virtual bool Routine();
 }; // Manager
 
 #endif // __GRAPHICSMANAGER_H__
