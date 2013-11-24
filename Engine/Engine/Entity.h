@@ -1,8 +1,6 @@
 #ifndef __ENTITY_H__
 #define __ENTITY_H__
 
-class Entity;
-
 #include <map>
 #include <vector>
 //#include <SDL.h>
@@ -12,14 +10,14 @@ class Entity;
 class Entity
 {
 protected:
-	Entity* _parent;
-	Vector2<> _pos;
+//	Entity* _parent;
+//	Vector2<> _pos;
 	std::multimap<int, Entity*> _children;
 	std::map<Component::Type, Component*> _components;
 
 public:
-//	Entity* const parent;
-	const Vector2<>& pos;
+	Entity* parent;
+	Vector2<> pos;
 	const std::multimap<int, Entity*>& children;
 	const std::map<Component::Type, Component*>& components;
 

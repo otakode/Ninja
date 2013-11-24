@@ -29,7 +29,9 @@ Graphic::Graphic(Graphic& model) : Component(Type::GRAPHIC), /*surface(_surface)
 
 Graphic::~Graphic()
 {
-	Game::GetGraphicsManager()->UnRegister(this);
+	GraphicsManager* graphics = Game::GetGraphicsManager();
+	if (graphics != NULL)
+		graphics->UnRegister(this);
 	if (this->_surface != NULL)
 	{
 		SDL_FreeSurface(this->_surface);

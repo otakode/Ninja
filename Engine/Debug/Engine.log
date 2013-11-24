@@ -1,3 +1,16 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Ninja.vcxproj, NinjaEngine.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿  Time.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  SoundsManager.cpp
+  Screen.cpp
+  PhysicsManager.cpp
+  Manager.cpp
+  Level.cpp
   GraphicsManager.cpp
+  Graphic.cpp
+  Game.cpp
+  Entity.cpp
+  ControlsManager.cpp
+  Controller.cpp
+  Component.cpp
   Engine.vcxproj -> C:\Users\Otakode\Documents\Git\Ninja\Debug\Engine.lib

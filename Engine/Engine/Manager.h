@@ -11,15 +11,9 @@ class Manager
 private:
 	Component::Type validComponent;
 
-protected:
-	std::list<Component*> _registry;
-
 public:
 	Manager(Component::Type type);
 	virtual ~Manager();
-
-	void Register(Component* c);
-	void UnRegister(Component* c);
 
 	bool ValidComponent(Component::Type type);
 

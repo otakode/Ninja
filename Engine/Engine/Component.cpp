@@ -1,8 +1,8 @@
 #include "Component.h"
+#include "Entity.h"
 
-Component::Component(Type type) : type(_type)
+Component::Component(Component::Type type) : type(_type), _type(type)
 {
-	this->_type = type;
 }
 
 Component::~Component()

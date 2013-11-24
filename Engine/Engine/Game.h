@@ -3,11 +3,11 @@
 
 class Game;
 
-#include "Level.h"
 #include "GraphicsManager.h"
 #include "ControlsManager.h"
 #include "SoundsManager.h"
 #include "PhysicsManager.h"
+#include "Level.h"
 
 class Game
 {
@@ -16,11 +16,11 @@ private:
 	bool running = false;
 
 public:
-	Level* level;
 	ControlsManager* controls;
 	PhysicsManager* physics;
 	SoundsManager* sounds;
 	GraphicsManager* graphics;
+	Level* level;
 
 public:
 	Game();
@@ -30,12 +30,12 @@ public:
 	void Run();
 
 	static void Quit();
-	static void LoadLevel(Level* level);
-	static Level* GetCurrentLevel();
 	static ControlsManager* GetControlsManager();
 	static PhysicsManager* GetPhysicsManager();
 	static SoundsManager* GetSoundsManager();
 	static GraphicsManager* GetGraphicsManager();
+	static void LoadLevel(Level* level);
+	static Level* GetCurrentLevel();
 
 }; // Game
 

@@ -4,7 +4,9 @@
 class TestLevel;
 
 #include "../../Engine/Engine/Level.h"
+#include "../../Engine/Engine/Game.h"
 #include "../../Engine/Engine/Graphic.h"
+#include "../../Engine/Engine/Controller.h"
 
 class TestLevel : public Level
 {

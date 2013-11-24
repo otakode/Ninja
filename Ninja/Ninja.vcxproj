@@ -69,9 +69,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ninja\main.cpp" />
+    <ClCompile Include="Ninja\PlayerController.cpp" />
     <ClCompile Include="Ninja\TestLevel.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ninja\PlayerController.h" />
     <ClInclude Include="Ninja\TestLevel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

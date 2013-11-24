@@ -1,2 +1,7 @@
-﻿  TestLevel.cpp
-  Ninja.vcxproj -> C:\Users\Otakode\Documents\Git\Ninja\Debug\Ninja.exe
+﻿  PlayerController.cpp
+  main.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  TestLevel.cpp
+Engine.lib(Time.obj) : error LNK2019: unresolved external symbol __imp__timeGetTime@0 referenced in function "public: static bool __cdecl Time::UpdateTime(void)" (?UpdateTime@Time@@SA_NXZ)
+C:\Users\Otakode\Documents\Git\Ninja\Debug\Ninja.exe : fatal error LNK1120: 1 unresolved externals

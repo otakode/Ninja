@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Time.h"
 
 Game* Game::_instance = NULL;
 
@@ -13,6 +14,8 @@ Game::Game() : level(NULL), controls(NULL), physics(NULL), sounds(NULL), graphic
 
 Game::~Game()
 {
+	if (Game::_instance == this)
+		Game::_instance = NULL;
 	if (this->controls != NULL)
 		delete this->controls;
 	if (this->physics != NULL)
@@ -21,8 +24,6 @@ Game::~Game()
 		delete this->sounds;
 	if (this->graphics != NULL)
 		delete this->graphics;
-	if (Game::_instance == this)
-		Game::_instance = NULL;
 }
 
 bool Game::Init()
@@ -38,6 +39,7 @@ void Game::Run()
 	this->running = true;
 	while (this->running)
 	{
+		Time::UpdateTime();
 		if (this->controls->Routine() == false)
 			break;
 		this->physics->Routine();

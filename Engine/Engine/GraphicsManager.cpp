@@ -9,6 +9,17 @@ GraphicsManager::~GraphicsManager()
 {
 }
 
+void GraphicsManager::Register(Component* c)
+{
+	if (this->ValidComponent(c->type))
+		this->_registry.push_back(c);
+}
+
+void GraphicsManager::UnRegister(Component* c)
+{
+	this->_registry.remove(c);
+}
+
 bool GraphicsManager::Routine()
 {
 	Level* level = Game::GetCurrentLevel();

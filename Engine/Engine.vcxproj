@@ -80,6 +80,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Component.cpp" />
+    <ClCompile Include="Engine\Controller.cpp" />
     <ClCompile Include="Engine\ControlsManager.cpp" />
     <ClCompile Include="Engine\Entity.cpp" />
     <ClCompile Include="Engine\Game.cpp" />
@@ -90,9 +91,11 @@
     <ClCompile Include="Engine\PhysicsManager.cpp" />
     <ClCompile Include="Engine\Screen.cpp" />
     <ClCompile Include="Engine\SoundsManager.cpp" />
+    <ClCompile Include="Engine\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Component.h" />
+    <ClInclude Include="Engine\Controller.h" />
     <ClInclude Include="Engine\ControlsManager.h" />
     <ClInclude Include="Engine\Entity.h" />
     <ClInclude Include="Engine\Game.h" />
@@ -103,6 +106,7 @@
     <ClInclude Include="Engine\PhysicsManager.h" />
     <ClInclude Include="Engine\Screen.h" />
     <ClInclude Include="Engine\SoundsManager.h" />
+    <ClInclude Include="Engine\Time.h" />
     <ClInclude Include="Engine\Vector2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

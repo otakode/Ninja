@@ -1,18 +1,11 @@
 #include "Entity.h"
 
-Entity::Entity(Entity* parent, float x, float y) : /*parent(_parent),*/ pos(_pos), children(_children), components(_components), _pos(0, 0)
+Entity::Entity(Entity* parent, float x, float y) : /*parent(_parent), pos(_pos),*/ children(_children), components(_components), parent(parent), pos(x, y)
 {
-	this->_parent = parent;
-	this->_pos.x = x;
-	this->_pos.y = y;
 }
 
-Entity::Entity(Entity& model) : /*parent(_parent),*/ pos(_pos), children(_children), components(_components), _pos(0, 0)
+Entity::Entity(Entity& model) : /*parent(_parent), pos(_pos),*/ children(_children), components(_components), parent(model.parent), pos(model.pos), _children(model.children), _components(model.components)
 {
-	this->_parent = model._parent;
-	this->_pos = model.pos;
-	this->_children = model.children;
-	this->_components = model.components;
 }
 
 Entity::~Entity()
@@ -31,8 +24,8 @@ Entity::~Entity()
 	{
 		delete it->second; // crash, because of array modification
 	}*/
-	if (this->_parent != NULL)
-		this->_parent->DelChild(this);
+	if (this->parent != NULL)
+		this->parent->DelChild(this);
 }
 
 Vector2<> Entity::GetAbsolutePos()
@@ -40,9 +33,9 @@ Vector2<> Entity::GetAbsolutePos()
 	Vector2<> absPos = this->pos;
 
 	Entity* entity = this;
-	while (entity->_parent != NULL)
+	while (entity->parent != NULL)
 	{
-		entity = entity->_parent;
+		entity = entity->parent;
 		absPos.x += entity->pos.x;
 		absPos.y += entity->pos.y;
 	}
@@ -52,7 +45,7 @@ Vector2<> Entity::GetAbsolutePos()
 void Entity::AddChild(int offset, Entity* child)
 {
 	this->_children.insert(std::pair<int, Entity*>(offset, child));
-	child->_parent = this;
+	child->parent = this;
 }
 
 void Entity::DelChild(Entity* child)
@@ -84,12 +77,14 @@ std::vector<Entity*> Entity::GetChildWithComponent(Component::Type type)
 
 void Entity::AddComponent(Component* component)
 {
-	this->_components.insert(std::pair<Component::Type, Component*>(component->type, component));
+	this->_components.emplace(component->type, component);
+	component->entity = this;
 }
 
 void Entity::DelComponent(Component* component)
 {
 	this->_components.erase(this->_components.find(component->type));
+	component->entity = NULL;
 }
 
 Component* Entity::GetComponent(Component::Type type)

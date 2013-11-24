@@ -11,12 +11,18 @@ class GraphicsManager : public Manager
 private:
 	Screen _screen;
 
+protected:
+	std::list<Component*> _registry;
+
 public:
 	const Screen& screen;
 
 public:
 	GraphicsManager();
 	virtual ~GraphicsManager();
+
+	void Register(Component* c);
+	void UnRegister(Component* c);
 
 	virtual bool Routine();
 
