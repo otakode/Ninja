@@ -39,7 +39,8 @@ void Game::Run()
 	this->running = true;
 	while (this->running)
 	{
-		Time::UpdateTime();
+		if (!Time::UpdateTime())
+			continue;
 		if (this->controls->Routine() == false)
 			break;
 		this->physics->Routine();

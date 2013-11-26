@@ -49,6 +49,7 @@ public:
 
 protected:
 	std::multimap<SDLKey, Controller*> _registry;
+	unsigned char* _keys;
 
 public:
 	ControlsManager();

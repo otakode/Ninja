@@ -1,4 +1,5 @@
 #include "TestLevel.h"
+#include "PlayerController.h"
 
 TestLevel::TestLevel()
 {
@@ -21,7 +22,7 @@ void TestLevel::Load()
 	Entity* player = new Entity(ground, 0, -50);
 	ground->AddChild(5, player);
 	player->AddComponent(new Graphic(50, 50, 0xFFFF0000));
-	Controller* playerControl = new Controller();
+	Controller* playerControl = new PlayerController();
 	Game::GetControlsManager()->RegisterToKey(playerControl, SDLK_RIGHT);
 	Game::GetControlsManager()->RegisterToKey(playerControl, SDLK_LEFT);
 	player->AddComponent(playerControl);

@@ -3,6 +3,7 @@
 
 ControlsManager::ControlsManager() : Manager(Component::CONTROLLER)
 {
+//	this->_keys = SDL_GetKeyState(NULL);
 }
 
 ControlsManager::~ControlsManager()
@@ -16,13 +17,19 @@ bool ControlsManager::Routine()
 	{
 		if (e.type == SDL_QUIT)
 			return false;
-		if (e.type == SDL_KEYDOWN)
+/*		if (e.type == SDL_KEYDOWN) // instant events
 		{
-			for (std::multimap<SDLKey, Controller*>::iterator it = this->_registry.find(e.key.keysym.sym); it->first == e.key.keysym.sym; ++it)
+			for (std::multimap<SDLKey, Controller*>::iterator it = this->_registry.find(e.key.keysym.sym); it != this->_registry.end() && it->first == e.key.keysym.sym; ++it)
 			{
-				it->second->HandleInput(e.key.keysym.sym);
+				it->second->HandleInput(it->first);
 			}
-		}
+		}*/
+	}
+	this->_keys = SDL_GetKeyState(NULL);
+	for (std::multimap<SDLKey, Controller*>::iterator it = this->_registry.begin(), e = this->_registry.end(); it != e; ++it)
+	{
+		if (this->_keys[it->first])
+			it->second->HandleInput(it->first);
 	}
 
 	return true;

@@ -14,10 +14,10 @@ void PlayerController::HandleInput(SDLKey key)
 	switch (key)
 	{
 		case SDLK_RIGHT:
-			this->entity->pos.x += Time::elapsed;
+			this->entity->pos.x += Time::elapsed * 50;
 			break;
 		case SDLK_LEFT:
-			this->entity->pos.x -= Time::elapsed;
+			this->entity->pos.x -= Time::elapsed * 50;
 			break;
 		default:
 			break;
