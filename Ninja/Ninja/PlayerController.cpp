@@ -1,8 +1,11 @@
 #include "PlayerController.h"
 #include "../../Engine/Engine/Time.h"
+#include "../../Engine/Engine/Game.h"
 
 PlayerController::PlayerController()
 {
+	Game::GetControlsManager()->RegisterToKey(this, SDLK_RIGHT);
+	Game::GetControlsManager()->RegisterToKey(this, SDLK_LEFT);
 }
 
 PlayerController::~PlayerController()

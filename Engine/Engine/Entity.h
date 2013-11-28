@@ -22,13 +22,13 @@ public:
 	const std::map<Component::Type, Component*>& components;
 
 public:
-	Entity(Entity* parent = NULL, float x = 0, float y = 0);
+	Entity();
 	Entity(Entity& model);
 	virtual ~Entity();
 
 	Vector2<> GetAbsolutePos();
 
-	void AddChild(int offset, Entity* child);
+	void AddChild(Entity* child, int offset, Vector2<> pos);
 	void DelChild(Entity* child);
 	std::vector<Entity*> GetChildWithComponent(Component::Type type);
 

@@ -1,4 +1,11 @@
-﻿  ControlsManager.cpp
+﻿  Entity.cpp
   Generating Code...
-cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  Skipping... (no relevant changes detected)
+  Time.cpp
+  SoundsManager.cpp
+  Screen.cpp
+  PhysicsManager.cpp
+  Manager.cpp
+  Controller.cpp
+  Component.cpp
   Engine.vcxproj -> C:\Users\Otakode\Documents\Git\Ninja\Debug\Engine.lib

@@ -1,11 +1,12 @@
 #include "Entity.h"
 
-Entity::Entity(Entity* parent, float x, float y) : /*parent(_parent), pos(_pos),*/ children(_children), components(_components), parent(parent), pos(x, y)
+Entity::Entity() : /*parent(_parent), pos(_pos),*/ children(_children), components(_components), parent(NULL), pos(0, 0)
 {
 }
 
-Entity::Entity(Entity& model) : /*parent(_parent), pos(_pos),*/ children(_children), components(_components), parent(model.parent), pos(model.pos), _children(model.children), _components(model.components)
+Entity::Entity(Entity& model) : /*parent(_parent), pos(_pos),*/ children(_children), components(_components), parent(NULL), pos(0, 0)
 {
+	// make copy of components & children;
 }
 
 Entity::~Entity()
@@ -42,10 +43,11 @@ Vector2<> Entity::GetAbsolutePos()
 	return absPos;
 }
 
-void Entity::AddChild(int offset, Entity* child)
+void Entity::AddChild(Entity* child, int offset, Vector2<> pos)
 {
-	this->_children.insert(std::pair<int, Entity*>(offset, child));
+	this->_children.emplace(offset, child);
 	child->parent = this;
+	child->pos = pos;
 }
 
 void Entity::DelChild(Entity* child)
