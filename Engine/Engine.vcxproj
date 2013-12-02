@@ -82,6 +82,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Body.cpp" />
     <ClCompile Include="Engine\Component.cpp" />
     <ClCompile Include="Engine\Controller.cpp" />
     <ClCompile Include="Engine\ControlsManager.cpp" />
@@ -97,6 +98,7 @@
     <ClCompile Include="Engine\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Body.h" />
     <ClInclude Include="Engine\Component.h" />
     <ClInclude Include="Engine\Controller.h" />
     <ClInclude Include="Engine\ControlsManager.h" />

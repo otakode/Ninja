@@ -1,11 +1,14 @@
-﻿  Entity.cpp
+﻿  Body.cpp
   Generating Code...
   Skipping... (no relevant changes detected)
   Time.cpp
   SoundsManager.cpp
   Screen.cpp
-  PhysicsManager.cpp
   Manager.cpp
   Controller.cpp
   Component.cpp
+  PhysicsManager.cpp
+  GraphicsManager.cpp
+  Graphic.cpp
+  Game.cpp
   Engine.vcxproj -> C:\Users\Otakode\Documents\Git\Ninja\Debug\Engine.lib

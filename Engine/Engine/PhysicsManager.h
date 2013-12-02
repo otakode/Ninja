@@ -4,13 +4,21 @@
 class PhysicsManager;
 
 #include "Manager.h"
+#include "Body.h"
 
 class PhysicsManager : public Manager
 {
+protected:
+	std::list<Component*> _registry;
+
 public:
 	PhysicsManager();
 	virtual ~PhysicsManager();
 
+	void Register(Body* body);
+	void UnRegister(Body* body);
+
+	virtual bool Routine();
 }; // PhysicsManager
 
 #endif // __PHYSICSMANAGER_H__

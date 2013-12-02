@@ -12,7 +12,7 @@ private:
 	Screen _screen;
 
 protected:
-	std::list<Component*> _registry;
+	std::list<Graphic*> _registry;
 
 public:
 	const Screen& screen;
@@ -21,8 +21,8 @@ public:
 	GraphicsManager();
 	virtual ~GraphicsManager();
 
-	void Register(Component* c);
-	void UnRegister(Component* c);
+	void Register(Graphic* graphic);
+	void UnRegister(Graphic* graphic);
 
 	virtual bool Routine();
 
