@@ -10,13 +10,14 @@ public:
 	enum Type
 	{
 		STATIC,
-		DYANAMIC
+		DYANAMIC,
+		CUSTOM
 	};
 	enum Shape
 	{
-		BOX,
+		RECTANGLE,
 		CIRCLE,
-		POLYGON
+		PIXELMASK
 	};
 
 private:
@@ -30,10 +31,28 @@ public:
 	const Shape& shape;
 
 public:
-	Body(Type type, Shape shape);
+	Body(Shape shape, Type type = Type::DYANAMIC);
 	virtual ~Body();
 
 	bool Collide(Body& other);
+
+protected:
+
+	static bool Collide_Rectangle(Body* a, Body* b);
+	static bool Collide_Circle(Body* a, Body* b);
+	static bool Collide_PixelMask(Body* a, Body* b);
+
+	static bool Collide_Rectangle_Rectangle(Body* a, Body* b);
+	static bool Collide_Rectangle_Circle(Body* a, Body* b);
+	static bool Collide_Rectangle_PixelMask(Body* a, Body* b);
+
+	static bool Collide_Circle_Rectangle(Body* a, Body* b);
+	static bool Collide_Circle_Circle(Body* a, Body* b);
+	static bool Collide_Circle_PixelMask(Body* a, Body* b);
+
+	static bool Collide_PixelMask_Rectangle(Body* a, Body* b);
+	static bool Collide_PixelMask_Circle(Body* a, Body* b);
+	static bool Collide_PixelMask_PixelMask(Body* a, Body* b);
 }; // Body
 
 #endif // __BODY_H__

@@ -9,7 +9,7 @@ class PhysicsManager;
 class PhysicsManager : public Manager
 {
 protected:
-	std::list<Component*> _registry;
+	std::list<Body*> _registry;
 
 public:
 	PhysicsManager();
@@ -19,6 +19,7 @@ public:
 	void UnRegister(Body* body);
 
 	virtual bool Routine();
+
 }; // PhysicsManager
 
 #endif // __PHYSICSMANAGER_H__
