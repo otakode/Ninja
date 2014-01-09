@@ -1,4 +1,45 @@
-﻿  PhysicsManager.cpp
-  Generating Code...
-cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
-  Engine.vcxproj -> C:\Users\Otakode\Documents\Git\Ninja\Debug\Engine.lib
+﻿La génération a démarré 09/01/2014 14:48:26.
+     1>Projet "C:\Users\Clement\Git\Ninja\Engine\Engine.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Engine\Body.cpp Engine\Body\Circle.cpp Engine\Body\PixelMask.cpp Engine\Body\Rectangle.cpp Engine\Component.cpp Engine\Entity.cpp Engine\Game.cpp Engine\Graphic.cpp Engine\GraphicsManager.cpp Engine\Level.cpp Engine\Math.cpp Engine\PhysicsManager.cpp Engine\Screen.cpp
+         Entity.cpp
+         Génération de code en cours...
+         Compilation en cours...
+         Screen.cpp
+         PhysicsManager.cpp
+         Math.cpp
+         Level.cpp
+         GraphicsManager.cpp
+         Graphic.cpp
+         Game.cpp
+         Component.cpp
+         Rectangle.cpp
+         PixelMask.cpp
+         Circle.cpp
+         Body.cpp
+         Génération de code en cours...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Clement\Git\Ninja\Debug\Engine.lib" winmm.lib /NOLOGO Debug\Body.obj
+         Debug\Circle.obj
+         Debug\PixelMask.obj
+         Debug\Rectangle.obj
+         Debug\Component.obj
+         Debug\Controller.obj
+         Debug\ControlsManager.obj
+         Debug\Entity.obj
+         Debug\Game.obj
+         Debug\Graphic.obj
+         Debug\GraphicsManager.obj
+         Debug\Level.obj
+         Debug\Manager.obj
+         Debug\Math.obj
+         Debug\PhysicsManager.obj
+         Debug\Screen.obj
+         Debug\SoundsManager.obj
+         Debug\Time.obj
+         Engine.vcxproj -> C:\Users\Clement\Git\Ninja\Debug\Engine.lib
+     1>Génération du projet "C:\Users\Clement\Git\Ninja\Engine\Engine.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:02.03

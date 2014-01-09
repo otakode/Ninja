@@ -95,6 +95,7 @@
     <ClCompile Include="Engine\GraphicsManager.cpp" />
     <ClCompile Include="Engine\Level.cpp" />
     <ClCompile Include="Engine\Manager.cpp" />
+    <ClCompile Include="Engine\Math.cpp" />
     <ClCompile Include="Engine\PhysicsManager.cpp" />
     <ClCompile Include="Engine\Screen.cpp" />
     <ClCompile Include="Engine\SoundsManager.cpp" />
@@ -114,6 +115,7 @@
     <ClInclude Include="Engine\GraphicsManager.h" />
     <ClInclude Include="Engine\Level.h" />
     <ClInclude Include="Engine\Manager.h" />
+    <ClInclude Include="Engine\Math.h" />
     <ClInclude Include="Engine\PhysicsManager.h" />
     <ClInclude Include="Engine\Screen.h" />
     <ClInclude Include="Engine\SoundsManager.h" />

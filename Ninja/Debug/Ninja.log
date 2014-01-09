@@ -1,1 +1,18 @@
-﻿  Ninja.vcxproj -> C:\Users\Otakode\Documents\Git\Ninja\Debug\Ninja.exe
+﻿La génération a démarré 09/01/2014 14:48:38.
+     1>Projet "C:\Users\Clement\Git\Ninja\Ninja\Ninja.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ninja\TestLevel.cpp Ninja\main.cpp
+         main.cpp
+         TestLevel.cpp
+         Génération de code en cours...
+     1>cl : Ligne de commande warning D9028: échec de la régénération minimale, passage à la génération normale
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Clement\Git\Ninja\Debug\Ninja.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ..\lib\SDL\x86\SDL.lib ..\lib\SDL\x86\SDLmain.lib ..\Debug\Engine.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Clement\Git\Ninja\Debug\Ninja.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Clement\Git\Ninja\Debug\Ninja.lib" /MACHINE:X86 Debug\main.obj
+         Debug\PlayerController.obj
+         Debug\TestLevel.obj
+         Ninja.vcxproj -> C:\Users\Clement\Git\Ninja\Debug\Ninja.exe
+     1>Génération du projet "C:\Users\Clement\Git\Ninja\Ninja\Ninja.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:00.85
