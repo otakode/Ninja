@@ -6,6 +6,7 @@
 class Rectangle : public Body
 {
 public:
+	Rectangle();
 	Rectangle(Type type);
 	virtual ~Rectangle();
 

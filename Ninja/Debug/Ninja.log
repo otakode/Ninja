@@ -1,1 +1,15 @@
-﻿  Ninja.vcxproj -> C:\Users\Otakode\Documents\Git\Ninja\Debug\Ninja.exe
+﻿  main.cpp
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(45): error C2061: syntax error : identifier 'Rectangle'
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(49): error C2061: syntax error : identifier 'Rectangle'
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(50): error C2061: syntax error : identifier 'Rectangle'
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(51): error C2061: syntax error : identifier 'Rectangle'
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(53): error C2061: syntax error : identifier 'Rectangle'
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(57): error C2061: syntax error : identifier 'Rectangle'
+  PlayerController.cpp
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(45): error C2061: syntax error : identifier 'Rectangle'
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(49): error C2061: syntax error : identifier 'Rectangle'
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(50): error C2061: syntax error : identifier 'Rectangle'
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(51): error C2061: syntax error : identifier 'Rectangle'
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(53): error C2061: syntax error : identifier 'Rectangle'
+c:\users\otakode\documents\git\ninja\engine\engine\body.h(57): error C2061: syntax error : identifier 'Rectangle'
+  Generating Code...

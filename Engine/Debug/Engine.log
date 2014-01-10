@@ -1,4 +1,20 @@
 ﻿  PhysicsManager.cpp
+  GraphicsManager.cpp
+  Rectangle.cpp
+  PixelMask.cpp
+  Circle.cpp
+  Body.cpp
+  Generating Code...
+  Compiling...
+  Graphic.cpp
+  Game.cpp
   Generating Code...
 cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  Skipping... (no relevant changes detected)
+  Time.cpp
+  SoundsManager.cpp
+  Screen.cpp
+  Manager.cpp
+  Controller.cpp
+  Component.cpp
   Engine.vcxproj -> C:\Users\Otakode\Documents\Git\Ninja\Debug\Engine.lib

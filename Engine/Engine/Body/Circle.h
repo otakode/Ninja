@@ -6,6 +6,7 @@
 class Circle : public Body
 {
 public:
+	Circle();
 	Circle(Type type);
 	virtual ~Circle();
 

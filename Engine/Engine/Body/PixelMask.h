@@ -6,6 +6,7 @@
 class PixelMask : public Body
 {
 public:
+	PixelMask();
 	PixelMask(Type type);
 	virtual ~PixelMask();
 
