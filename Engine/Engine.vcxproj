@@ -83,9 +83,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Body.cpp" />
-    <ClCompile Include="Engine\Body\Circle.cpp" />
-    <ClCompile Include="Engine\Body\PixelMask.cpp" />
-    <ClCompile Include="Engine\Body\Rectangle.cpp" />
     <ClCompile Include="Engine\Component.cpp" />
     <ClCompile Include="Engine\Controller.cpp" />
     <ClCompile Include="Engine\ControlsManager.cpp" />
@@ -97,15 +94,13 @@
     <ClCompile Include="Engine\Manager.cpp" />
     <ClCompile Include="Engine\Math.cpp" />
     <ClCompile Include="Engine\PhysicsManager.cpp" />
+    <ClCompile Include="Engine\Rectangle.cpp" />
     <ClCompile Include="Engine\Screen.cpp" />
     <ClCompile Include="Engine\SoundsManager.cpp" />
     <ClCompile Include="Engine\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Body.h" />
-    <ClInclude Include="Engine\Body\Circle.h" />
-    <ClInclude Include="Engine\Body\PixelMask.h" />
-    <ClInclude Include="Engine\Body\Rectangle.h" />
     <ClInclude Include="Engine\Component.h" />
     <ClInclude Include="Engine\Controller.h" />
     <ClInclude Include="Engine\ControlsManager.h" />
@@ -117,6 +112,7 @@
     <ClInclude Include="Engine\Manager.h" />
     <ClInclude Include="Engine\Math.h" />
     <ClInclude Include="Engine\PhysicsManager.h" />
+    <ClInclude Include="Engine\Rectangle.h" />
     <ClInclude Include="Engine\Screen.h" />
     <ClInclude Include="Engine\SoundsManager.h" />
     <ClInclude Include="Engine\Time.h" />
